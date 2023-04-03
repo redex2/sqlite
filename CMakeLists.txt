@@ -1,9 +1,8 @@
 add_library(sqlite3 STATIC)
 
 target_sources(sqlite3 PRIVATE
-    sqlite3.c 
-    sqlite3.h 
-    sqlite3ext.h
+    sqlite3.c
+    sqlite3.h
 )
 
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
