@@ -1,0 +1,30 @@
+name: Update
+
+on:
+  schedule:
+    - cron: '2 3 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: update
+        run: |
+          cd ${{github.workspace}}
+
+          git config --global user.name 'redex2.dev'
+          git config --global user.email 'postmaster@redex2.dev'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+          ./update.sh
+
+      
