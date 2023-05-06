@@ -25,7 +25,8 @@ jobs:
           git config --global user.name 'redex2.dev'
           git config --global user.email 'postmaster@redex2.dev'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-
+          
+          chmod +x update.sh
           ./update.sh
 
       
