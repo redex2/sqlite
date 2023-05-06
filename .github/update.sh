@@ -1,9 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-dir=`dirname -- "$0"`
-cd $dir
-
 wget -qO- https://sqlite.org/src/tarball/release/sqlite.tar.gz | tar xz
 
 mkdir sqlite/build
