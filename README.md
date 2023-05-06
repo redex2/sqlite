@@ -1,4 +1,4 @@
-# Unofficial cmake sqlite mirror
+# Unofficial cmake sqlite c/c++ library mirror
 
 Official git repo: [GitHub - sqlite/sqlite: Official Git mirror of the SQLite source tree](https://github.com/sqlite/sqlite)
 
